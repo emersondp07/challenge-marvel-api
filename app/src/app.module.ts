@@ -1,10 +1,9 @@
-import { Module, forwardRef } from '@nestjs/common';
-
-import { CrudMarvelModule } from './crud-marvel/crud-marvel.module';
+import { Module } from '@nestjs/common';
+import { MarvelModule } from './crud-marvel/marvel.module';
 import { HttpsModule } from './http/http.module';
 
 @Module({
-  imports: [forwardRef(() => CrudMarvelModule), forwardRef(() => HttpsModule),],
+  imports: [MarvelModule, HttpsModule],
   controllers: [],
   providers: [],
 })

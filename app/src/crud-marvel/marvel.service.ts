@@ -3,14 +3,12 @@ import { HttpsServices } from "../http/http.service";
 import { PrismaService } from "../prisma/prisma.service";
 
 @Injectable()
-export class CrudMarvelService {
+export class MarvelService {
   constructor(private readonly prismaService: PrismaService,
     private readonly httpsServices: HttpsServices) { }
 
-  async upgradeListDb(): Promise<any> {
+  async upgradeListDb(): Promise<void> {
     const getAllHeroes = await this.httpsServices.findAllHero()
-
-    const listHeroes: string[] = []
 
     getAllHeroes.map(async (hero) =>
       !await this.prismaService.heroes.findUnique({
@@ -30,15 +28,11 @@ export class CrudMarvelService {
     )
   }
 
-  async findAllHeroes(): Promise<any> {
-    const listInTheDb = await this.prismaService.heroes.findMany()
-
-    console.log(listInTheDb.length);
-
-    return listInTheDb
+  async findAllHeroes(): Promise<object[]> {
+    return await this.prismaService.heroes.findMany()
   }
 
-  async findOne(name: string): Promise<any> {
+  async findOne(name: string): Promise<object> {
     return await this.prismaService.heroes.findMany({
       where: {
         name: {
@@ -48,7 +42,7 @@ export class CrudMarvelService {
     })
   }
 
-  async addFavorite(id: number): Promise<any> {
+  async addFavorite(id: number): Promise<object> {
 
     const hero = await this.prismaService.heroes.findUnique({
       where: {
@@ -83,7 +77,7 @@ export class CrudMarvelService {
 
   }
 
-  async favoriteList(): Promise<any> {
+  async favoriteList(): Promise<object[]> {
     return await this.prismaService.heroes.findMany({
       where: {
         favorite: true

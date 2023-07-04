@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CrudMarvelController } from './crud-marvel.controller';
-import { CrudMarvelService } from './crud-marvel.service';
+import { CrudMarvelController } from './marvel.controller';
+import { CrudMarvelService } from './marvel.service';
 
 describe('CrudMarvelController', () => {
   let controller: CrudMarvelController;
