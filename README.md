@@ -10,7 +10,7 @@
 
 <br>
 
-## Installation
+## Instalação
 
 ```bash
 # Instalar as dependencias
@@ -64,7 +64,7 @@ $ yarn run start:prod
 A pasta http foi criado com o intuito de fazer o serviço que integra com a API da Marvel, buscando e filtrado o nome dos heróis e fazendo uma lista no banco de dados local. 
 Pasta marvel foi criado o module, controller para as rotas e os serviços, onde tem a rota de puxa dados da API marvel e cria no banco de dados, tem uma rota que busca todos os heóis, uma rota que busca um herói, uma rota de atualiza o status de favorito e a ultima rota busca a lista dos selecionados como favoritos. <p>
 
-### Author
+### Autor
 
 | [![github/emersondp07](https://avatars.githubusercontent.com/u/91437391?v=4)](https://github.com/emersondp07 "Checkout github") |
 |---|
