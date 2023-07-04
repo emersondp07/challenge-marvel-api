@@ -60,9 +60,10 @@ $ yarn run start:prod
 <br>
 
 ## Arquitetura utilizada
-<p>Foi três module, a pasta prisma foi criado para fazer a conexão com o banco de dados local para cada serviço que iria utilizar nas rotas da pasta marvel. 
-A pasta http foi criado com o intuito de fazer o serviço que integra com a API da Marvel, buscando e filtrado o nome dos heróis e fazendo uma lista no banco de dados local. 
-Pasta marvel foi criado o module, controller para as rotas e os serviços, onde tem a rota de puxa dados da API marvel e cria no banco de dados, tem uma rota que busca todos os heóis, uma rota que busca um herói, uma rota de atualiza o status de favorito e a ultima rota busca a lista dos selecionados como favoritos. <p>
+<p>Foram criados três modulos:
+- A pasta prisma foi criada para fazer a conexão com o banco de dados local para cada serviço que iria utilizar nas rotas da pasta Marvel; 
+- A pasta http foi criada com o intuito de fazer o serviço que integra com a API da Marvel, buscando e filtrado o nome dos heróis e fazendo uma lista no banco de dados local; 
+- Já a pasta Marvel, foi criada com os arquivos module, controller para as rotas e os services, onde tem a rota de buscar dados da API Marvel e criar uma lista de hérois no banco de dados; A rota que busca todos os heróis; A rota que busca um herói; A rota de atualizar o status de favorito; e a última rota que busca a lista dos selecionados como favoritos. <p>
 
 ### Autor
 
